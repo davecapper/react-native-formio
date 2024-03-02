@@ -1,7 +1,7 @@
 import React from 'react';
 import {StyleSheet} from  'react-native';
 import BaseComponent from '../sharedComponents/Base';
-import {Button as ButtonElement} from 'react-native-elements';
+import {Button as ButtonElement} from '@rneui/themed';
 import DeviceInfo from 'react-native-device-info';
 
 export default class Button extends BaseComponent {

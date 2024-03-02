@@ -1,20 +1,20 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import RNTooltip from 'rn-tooltip';
-import {Text, StyleSheet} from 'react-native';
-import {Icon} from 'react-native-elements';
+import {StyleSheet} from 'react-native';
+import {Icon,Text} from '@rneui/themed';
 
 const Tooltip = (props) => {
   const customStyles = props.styles || {};
   const styles = StyleSheet.create({
-    tooltipText: {
-      flexWrap: 'wrap',
-      color: props.color,
-    },
     tooltipIcon: {
       marginLeft: -20,
       marginTop: 13,
       ...customStyles.icon
+    },
+    tooltipText: {
+      color: props.color,
+      flexWrap: 'wrap',
     },
   });
   return (

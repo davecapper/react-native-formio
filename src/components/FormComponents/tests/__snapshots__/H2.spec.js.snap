@@ -2,27 +2,26 @@
 
 exports[`H#  H2 component Renders a basic H2 component 1`] = `
 <Text
+  accessibilityRole="text"
   style={
-    Array [
-      Object {},
-      undefined,
-      undefined,
-      undefined,
-      undefined,
-      undefined,
-      undefined,
-      undefined,
-      undefined,
-      undefined,
-      Object {
-        "fontSize": 28,
-        "letterSpacing": 0.36,
-        "lineHeight": 34,
-        "margin": 10,
-      },
-    ]
+    {
+      "color": "#242424",
+      "fontSize": 28,
+      "letterSpacing": 0.36,
+      "lineHeight": 34,
+      "margin": 10,
+    }
   }
 >
-  Content
+  <Text
+    accessibilityRole="text"
+    style={
+      {
+        "color": "#242424",
+      }
+    }
+  >
+    Content
+  </Text>
 </Text>
 `;

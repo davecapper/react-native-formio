@@ -1,0 +1,59 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Panel  Panel component Renders a basic panel component 1`] = `
+<View
+  style={
+    {
+      "backgroundColor": "#ffffff",
+      "borderColor": "#e1e8ee",
+      "borderWidth": 1,
+      "flex": 1,
+      "flexDirection": "column",
+      "margin": 15,
+      "marginBottom": 0,
+      "padding": 0,
+      "paddingBottom": 20,
+      "shadowColor": "rgba(0,0,0, .2)",
+      "shadowOffset": {
+        "height": 0,
+        "width": 0,
+      },
+      "shadowOpacity": 1,
+      "shadowRadius": 1,
+    }
+  }
+>
+  <View
+    style={
+      {
+        "backgroundColor": "transparent",
+      }
+    }
+  >
+    <Text
+      accessibilityRole="text"
+      style={
+        {
+          "alignSelf": "flex-start",
+          "color": "rgba(0, 0, 0, 0.54)",
+          "fontSize": 18,
+          "fontWeight": "bold",
+          "margin": 10,
+          "marginBottom": 15,
+          "textAlign": "center",
+        }
+      }
+      testID="cardTitle"
+    >
+      testpanel
+    </Text>
+    <View
+      style={
+        {
+          "flex": 1,
+        }
+      }
+    />
+  </View>
+</View>
+`;

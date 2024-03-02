@@ -54,7 +54,7 @@ export const interpolate = (template, variables) => {
   var transform = getTransformer(variables);
   //find all {{ }} expression blocks and then replace the blocks with their evaluation.
   try {
-    return template.replace(/\{\s*\{([^\}]*)\}\s*\}/gm, transform);
+    return template.replace(/\{\s*\{([^}]*)\}\s*\}/gm, transform);
   }
   catch (error) {
     return '';
@@ -69,7 +69,7 @@ export const interpolate = (template, variables) => {
 export const serialize = obj => {
   var str = [];
   for (var p in obj) {
-    if (obj.hasOwnProperty(p)) {
+    if (Object.prototype.hasOwnProperty.call(obj, p)) {
       str.push(encodeURIComponent(p) + '=' + encodeURIComponent(obj[p]));
     }
   }

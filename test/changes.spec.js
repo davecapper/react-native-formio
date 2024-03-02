@@ -2,7 +2,7 @@ import React from 'react';
 import renderer from 'react-test-renderer';
 import {Formio, FormioComponentsList} from '../src';
 import {ScrollView} from 'react-native';
-import {FormInput} from 'react-native-elements';
+import {Input} from '@rneui/themed';
 
 const form = {
 components:  [
@@ -54,7 +54,7 @@ describe('Change Events @change', function() {
     expect(elementInstance.findByType(ScrollView)).toBeDefined();
     expect(elementInstance.findByType(FormioComponentsList)).toBeDefined();
     expect(elementInstance.findByType(FormioComponentsList).props.components).toEqual(form.components);
-    expect(elementInstance.findByType(FormInput)).toBeDefined();
+    expect(elementInstance.findByType(Input)).toBeDefined();
   });
 
   it('fires change events on a form with skipInit', function(done) {

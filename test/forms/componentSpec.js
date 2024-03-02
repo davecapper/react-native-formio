@@ -1,6 +1,6 @@
 
-//Spec for textfeild component
-export var textfeild = {
+//Spec for textfield component
+export var textfield = {
     'input': true,
     'tableView': true,
     'inputType': 'text',

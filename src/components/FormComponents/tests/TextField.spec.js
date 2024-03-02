@@ -1,14 +1,14 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 import {View} from 'react-native';
-import {FormLabel, FormInput} from 'react-native-elements';
-import Textfield from '../textfield/Textfield';
+import {Input, Text} from '@rneui/themed';
 import colors from '../../../defaultTheme/colors';
 import theme from '../../../defaultTheme';
+import Textfield from '../textfield/TextField';
 
-jest.mock('react-native-elements', () => ({
-  FormInput: () => () => 'FormInput',
-  FormLabel: () => () => 'FormLabel',
+jest.mock('@rneui/themed', () => ({
+  Input: () => () => 'Input',
+  Text: () => () => 'Text',
 }));
 
 describe('Textfield @textfield', () => {
@@ -56,9 +56,9 @@ describe('Textfield @textfield', () => {
       const inputInstance = element.root;
       expect(element).toMatchSnapshot();
       expect(inputInstance.findByType(View)).toBeDefined();
-      expect(inputInstance.findByType(FormLabel)).toBeDefined();
-      expect(inputInstance.findByType(FormInput)).toBeDefined();
-      expect(inputInstance.findByType(FormInput).props.id).toEqual('myTextfield');
+      expect(inputInstance.findByType(Text)).toBeDefined();
+      expect(inputInstance.findByType(Input)).toBeDefined();
+      expect(inputInstance.findByType(Input).props.id).toEqual('myTextfield');
       // expect(element.hasClass('form-group form-field-type-textfield form-group-myTextfield')).to.equal(true);
       // expect(element.attr('id')).to.equal('form-group-myTextfield');
       // expect(element.find('.formio-component-single').length).to.equal(1);

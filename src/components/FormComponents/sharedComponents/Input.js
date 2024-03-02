@@ -4,7 +4,7 @@ import {StyleSheet} from 'react-native';
 import DeviceInfo from 'react-native-device-info';
 import {TextMask} from 'react-text-mask-hoc/ReactNative';
 import {clone} from 'lodash';
-import {FormInput} from 'react-native-elements';
+import {Input} from '@rneui/themed';
 import PropTypes from 'prop-types';
 
 export default class InputComponent extends MultiComponent {
@@ -109,9 +109,9 @@ export default class InputComponent extends MultiComponent {
       },
       input: {
         color: themeStyle.color,
+        flex: 1,
         fontSize: themeStyle.fontSize,
         lineHeight: themeStyle.lineHeight,
-        flex: 1,
         maxWidth: DeviceInfo.isTablet() ? 580 : 210,
       }
     });
@@ -143,10 +143,10 @@ export default class InputComponent extends MultiComponent {
       properties.placeholderChar = '_';
       properties.guide = true;
 
-      return (<TextMask style={style.input} Component={FormInput} {...properties}/>);
+      return (<TextMask style={style.input} Component={Input} {...properties}/>);
     }
     else {
-      return (<FormInput inputStyle={style.input} containerStyle={style.container} {...properties} />);
+      return (<Input inputStyle={style.input} containerStyle={style.container} {...properties} />);
     }
   }
 }

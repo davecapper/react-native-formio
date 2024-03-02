@@ -898,12 +898,12 @@ export function fieldData(data, component) {
       key = parts[i];
 
       // Handle nested resources
-      if (value.hasOwnProperty('_id')) {
+      if (Object.prototype.hasOwnProperty.call(value, '_id')) {
         value = value.data;
       }
 
       // Return if the key is not found on the value.
-      if (!value.hasOwnProperty(key)) {
+      if (!Object.prototype.hasOwnProperty.call(value, key)) {
         return;
       }
 

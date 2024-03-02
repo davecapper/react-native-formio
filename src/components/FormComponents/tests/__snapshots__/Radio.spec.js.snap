@@ -3,55 +3,135 @@
 exports[`Radio Radio field Renders a radio field 1`] = `
 <View
   style={
-    Object {
+    {
       "flex": 1,
     }
   }
 >
   <View
     style={
-      Array [
-        undefined,
-        Object {
-          "marginLeft": 0,
-          "marginTop": 20,
-          "paddingRight": 10,
-        },
-        false,
-      ]
+      {
+        "flexDirection": "column",
+      }
     }
   >
-    <View>
-      <View
-        style={
-          Array [
-            Object {
-              "alignItems": "center",
-              "alignSelf": "center",
-              "flexDirection": "row",
-              "marginBottom": 5,
-            },
-            Object {
-              "alignSelf": "flex-start",
-              "justifyContent": "flex-start",
-            },
-            Object {
-              "flexDirection": "column",
-              "paddingLeft": 10,
-            },
-          ]
+    <View
+      style={
+        {
+          "flexDirection": "row",
+          "marginRight": 0,
+          "marginTop": 15,
         }
-      >
+      }
+    />
+    <View
+      style={
+        [
+          undefined,
+          {
+            "marginLeft": 0,
+            "marginTop": 20,
+            "paddingRight": 10,
+          },
+          false,
+        ]
+      }
+    >
+      <View>
         <View
           style={
-            Object {
-              "marginLeft": 10,
-            }
+            [
+              {
+                "flexDirection": "row",
+                "marginBottom": 5,
+              },
+              {
+                "alignSelf": "flex-start",
+                "justifyContent": "flex-start",
+              },
+              {
+                "flexDirection": "column",
+                "paddingLeft": 10,
+              },
+            ]
           }
         >
           <View
+            style={
+              {
+                "marginLeft": 10,
+              }
+            }
+          >
+            <View
+              accessibilityState={
+                {
+                  "busy": undefined,
+                  "checked": undefined,
+                  "disabled": undefined,
+                  "expanded": undefined,
+                  "selected": undefined,
+                }
+              }
+              accessibilityValue={
+                {
+                  "max": undefined,
+                  "min": undefined,
+                  "now": undefined,
+                  "text": undefined,
+                }
+              }
+              accessible={true}
+              collapsable={false}
+              focusable={true}
+              onClick={[Function]}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                {
+                  "alignItems": "center",
+                  "alignSelf": "center",
+                  "borderColor": "#03a9f4",
+                  "borderRadius": 10,
+                  "borderWidth": 2,
+                  "height": 20,
+                  "justifyContent": "center",
+                  "opacity": 1,
+                  "width": 20,
+                }
+              }
+            >
+              <View
+                style={
+                  [
+                    {
+                      "borderRadius": 10,
+                    },
+                    false,
+                    false,
+                    false,
+                  ]
+                }
+              />
+            </View>
+          </View>
+          <View
+            accessibilityState={
+              {
+                "busy": undefined,
+                "checked": undefined,
+                "disabled": undefined,
+                "expanded": undefined,
+                "selected": undefined,
+              }
+            }
             accessible={true}
-            isTVSelectable={true}
+            focusable={true}
+            onClick={[Function]}
             onResponderGrant={[Function]}
             onResponderMove={[Function]}
             onResponderRelease={[Function]}
@@ -59,108 +139,136 @@ exports[`Radio Radio field Renders a radio field 1`] = `
             onResponderTerminationRequest={[Function]}
             onStartShouldSetResponder={[Function]}
             style={
-              Object {
-                "alignItems": "center",
-                "alignSelf": "center",
-                "borderColor": "#03a9f4",
-                "borderRadius": 10,
-                "borderWidth": 2,
-                "height": 20,
-                "justifyContent": "center",
-                "opacity": 1,
-                "width": 20,
-              }
-            }
-          >
-            <View
-              style={
-                Array [
-                  Object {
-                    "borderRadius": 10,
-                  },
-                  false,
-                  false,
-                  false,
-                ]
-              }
-            />
-          </View>
-        </View>
-        <View
-          accessible={true}
-          onResponderGrant={[Function]}
-          onResponderMove={[Function]}
-          onResponderRelease={[Function]}
-          onResponderTerminate={[Function]}
-          onResponderTerminationRequest={[Function]}
-          onStartShouldSetResponder={[Function]}
-          style={
-            Array [
-              Object {},
-              Object {
-                "alignItems": "center",
-                "alignSelf": "center",
-                "flexDirection": "row",
-              },
-            ]
-          }
-        >
-          <Text
-            style={
-              Array [
-                Object {
-                  "lineHeight": 20,
-                  "paddingLeft": 10,
-                },
-                Object {
-                  "paddingLeft": 0,
-                },
-                Object {
-                  "color": undefined,
-                },
-                Object {
-                  "fontSize": 14,
-                  "marginHorizontal": 10,
+              [
+                {},
+                {
+                  "alignItems": "center",
+                  "alignSelf": "center",
+                  "flexDirection": "row",
                 },
               ]
             }
           >
-            test
-          </Text>
+            <Text
+              style={
+                [
+                  {
+                    "lineHeight": 20,
+                    "paddingLeft": 10,
+                  },
+                  {
+                    "paddingLeft": 0,
+                  },
+                  {
+                    "color": undefined,
+                  },
+                  {
+                    "fontSize": 14,
+                    "marginHorizontal": 10,
+                  },
+                ]
+              }
+            >
+              test
+            </Text>
+          </View>
         </View>
       </View>
-    </View>
-    <View>
-      <View
-        style={
-          Array [
-            Object {
-              "alignItems": "center",
-              "alignSelf": "center",
-              "flexDirection": "row",
-              "marginBottom": 5,
-            },
-            Object {
-              "alignSelf": "flex-start",
-              "justifyContent": "flex-start",
-            },
-            Object {
-              "flexDirection": "column",
-              "paddingLeft": 10,
-            },
-          ]
-        }
-      >
+      <View>
         <View
           style={
-            Object {
-              "marginLeft": 10,
-            }
+            [
+              {
+                "flexDirection": "row",
+                "marginBottom": 5,
+              },
+              {
+                "alignSelf": "flex-start",
+                "justifyContent": "flex-start",
+              },
+              {
+                "flexDirection": "column",
+                "paddingLeft": 10,
+              },
+            ]
           }
         >
           <View
+            style={
+              {
+                "marginLeft": 10,
+              }
+            }
+          >
+            <View
+              accessibilityState={
+                {
+                  "busy": undefined,
+                  "checked": undefined,
+                  "disabled": undefined,
+                  "expanded": undefined,
+                  "selected": undefined,
+                }
+              }
+              accessibilityValue={
+                {
+                  "max": undefined,
+                  "min": undefined,
+                  "now": undefined,
+                  "text": undefined,
+                }
+              }
+              accessible={true}
+              collapsable={false}
+              focusable={true}
+              onClick={[Function]}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                {
+                  "alignItems": "center",
+                  "alignSelf": "center",
+                  "borderColor": "#03a9f4",
+                  "borderRadius": 10,
+                  "borderWidth": 2,
+                  "height": 20,
+                  "justifyContent": "center",
+                  "opacity": 1,
+                  "width": 20,
+                }
+              }
+            >
+              <View
+                style={
+                  [
+                    {
+                      "borderRadius": 10,
+                    },
+                    false,
+                    false,
+                    false,
+                  ]
+                }
+              />
+            </View>
+          </View>
+          <View
+            accessibilityState={
+              {
+                "busy": undefined,
+                "checked": undefined,
+                "disabled": undefined,
+                "expanded": undefined,
+                "selected": undefined,
+              }
+            }
             accessible={true}
-            isTVSelectable={true}
+            focusable={true}
+            onClick={[Function]}
             onResponderGrant={[Function]}
             onResponderMove={[Function]}
             onResponderRelease={[Function]}
@@ -168,74 +276,39 @@ exports[`Radio Radio field Renders a radio field 1`] = `
             onResponderTerminationRequest={[Function]}
             onStartShouldSetResponder={[Function]}
             style={
-              Object {
-                "alignItems": "center",
-                "alignSelf": "center",
-                "borderColor": "#03a9f4",
-                "borderRadius": 10,
-                "borderWidth": 2,
-                "height": 20,
-                "justifyContent": "center",
-                "opacity": 1,
-                "width": 20,
-              }
-            }
-          >
-            <View
-              style={
-                Array [
-                  Object {
-                    "borderRadius": 10,
-                  },
-                  false,
-                  false,
-                  false,
-                ]
-              }
-            />
-          </View>
-        </View>
-        <View
-          accessible={true}
-          onResponderGrant={[Function]}
-          onResponderMove={[Function]}
-          onResponderRelease={[Function]}
-          onResponderTerminate={[Function]}
-          onResponderTerminationRequest={[Function]}
-          onStartShouldSetResponder={[Function]}
-          style={
-            Array [
-              Object {},
-              Object {
-                "alignItems": "center",
-                "alignSelf": "center",
-                "flexDirection": "row",
-              },
-            ]
-          }
-        >
-          <Text
-            style={
-              Array [
-                Object {
-                  "lineHeight": 20,
-                  "paddingLeft": 10,
-                },
-                Object {
-                  "paddingLeft": 0,
-                },
-                Object {
-                  "color": undefined,
-                },
-                Object {
-                  "fontSize": 14,
-                  "marginHorizontal": 10,
+              [
+                {},
+                {
+                  "alignItems": "center",
+                  "alignSelf": "center",
+                  "flexDirection": "row",
                 },
               ]
             }
           >
-            test1
-          </Text>
+            <Text
+              style={
+                [
+                  {
+                    "lineHeight": 20,
+                    "paddingLeft": 10,
+                  },
+                  {
+                    "paddingLeft": 0,
+                  },
+                  {
+                    "color": undefined,
+                  },
+                  {
+                    "fontSize": 14,
+                    "marginHorizontal": 10,
+                  },
+                ]
+              }
+            >
+              test1
+            </Text>
+          </View>
         </View>
       </View>
     </View>

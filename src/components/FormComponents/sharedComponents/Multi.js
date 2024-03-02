@@ -9,9 +9,8 @@ import {
   Icon,
   Button,
   FormValidationMessage,
-  Text,
-  FormLabel
-} from 'react-native-elements';
+  Text
+} from '@rneui/themed';
 
 export default class MultiComponent extends ValueComponent {
   constructor(props) {
@@ -51,7 +50,7 @@ export default class MultiComponent extends ValueComponent {
   getTableRows(value, id, style) {
     const error = this.state.isPristine || value.isValid ? false : true;
     const Element = this.getSingleElement(value, id, error);
-    const errorText = error ? (<FormValidationMessage style={style.errorMessage}> {value.errorMessage}</FormValidationMessage>) : null;
+    const errorText = error ? (<FormValidationMessage style={style.errorMessage}><Text> {value.errorMessage}</Text></FormValidationMessage>) : null;
     return (
       <View style={style.fieldWrapper}>
         {Element}
@@ -92,31 +91,31 @@ export default class MultiComponent extends ValueComponent {
 
   getElements() {
     const multiStyles = StyleSheet.create({
-      fieldWrapper: {
-        flex: 1,
-      },
-      mainElement: this.elementLayout(this.props.component.labelPosition),
-      labelWrapper: {
-        flexDirection: 'row',
-        marginTop: this.props.component.labelPosition === 'top' || this.props.component.labelPosition === 'bottom' ? 0 : 15,
-        marginRight: this.props.component.labelPosition === 'left-left' || this.props.component.labelPosition === 'left-right' ? 10 : 0,
-      },
-      errorText: {
-        alignSelf: 'flex-end',
-        fontSize: 10,
-        color: this.props.colors.errorColor
-      },
       descriptionText: {
         fontSize: DeviceInfo.isTablet() ? 12 : 10,
         marginLeft: 20,
         marginTop: 10,
       },
+      errorText: {
+        alignSelf: 'flex-end',
+        color: this.props.colors.errorColor,
+        fontSize: 10
+      },
+      fieldWrapper: {
+        flex: 1,
+      },
       labelStyle: {
-        flexWrap: 'wrap',
-        maxWidth: DeviceInfo.isTablet() ? 580 : 210,
         color: this.props.theme.Label.color,
+        flexWrap: 'wrap',
         fontSize: DeviceInfo.isTablet() ? this.props.theme.Label.fontSize : 12,
-      }
+        maxWidth: DeviceInfo.isTablet() ? 580 : 210,
+      },
+      labelWrapper: {
+        flexDirection: 'row',
+        marginRight: this.props.component.labelPosition === 'left-left' || this.props.component.labelPosition === 'left-right' ? 10 : 0,
+        marginTop: this.props.component.labelPosition === 'top' || this.props.component.labelPosition === 'bottom' ? 0 : 15,
+      },
+      mainElement: this.elementLayout(this.props.component.labelPosition)
     });
 
     const {component} = this.props;
@@ -127,7 +126,7 @@ export default class MultiComponent extends ValueComponent {
     const prefix = (<Text>{component.prefix}</Text>);
     const suffix = (<Text>{component.suffix}</Text>);
     const inputLabel = (component.label && !component.hideLabel ?
-      <FormLabel labelStyle={multiStyles.labelStyle}>{requiredInline} {prefix} {component.label} {suffix}</FormLabel> : null);
+      <Text labelStyle={multiStyles.labelStyle}>{requiredInline} {prefix} {component.label} {suffix}</Text> : null);
 
       const data = this.state.value || {};
     if (component.multiple) {
@@ -138,7 +137,7 @@ export default class MultiComponent extends ValueComponent {
           <View>
             <Text h3>{component.label}</Text>
             {rows}
-            <Button icon={{name: 'plus', type: 'font-awesome'}} onPress={this.addFieldValue}> Add another</Button>
+            <Button icon={{name: 'plus', type: 'font-awesome'}} onPress={this.addFieldValue}><Text> Add another</Text></Button>
           </View>
       );
     }

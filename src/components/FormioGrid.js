@@ -73,27 +73,28 @@ export default class FormioGrid extends React.Component {
     }
   }
 
-  componentWillReceiveProps(nextProps) {
-    if (nextProps.form !== this.props.form) {
-      this.setState({
-        columns: this.columnsFromForm(nextProps.form)
-      });
-    }
-    if (nextProps.submissions !== this.state.submissions) {
-      this.setState({
-        submissions: nextProps.submissions
-      });
-    }
-    if (nextProps.pagination.page !== this.state.pagination.page) {
-      this.setState(curState => curState.pagination.page = nextProps.pagination.page);
-    }
-    if (nextProps.pagination.numPage !== this.state.pagination.numPage) {
-      this.setState(curState => curState.pagination.numPage = nextProps.pagination.numPage);
-    }
-    if (nextProps.pagination.size !== this.state.pagination.size) {
-      this.setState(curState => curState.pagination.size = nextProps.pagination.size);
-    }
-  }
+  //TODO: DC - FIX THIS!
+  // componentWillReceiveProps(nextProps) {
+  //   if (nextProps.form !== this.props.form) {
+  //     this.setState({
+  //       columns: this.columnsFromForm(nextProps.form)
+  //     });
+  //   }
+  //   if (nextProps.submissions !== this.state.submissions) {
+  //     this.setState({
+  //       submissions: nextProps.submissions
+  //     });
+  //   }
+  //   if (nextProps.pagination.page !== this.state.pagination.page) {
+  //     this.setState(curState => curState.pagination.page = nextProps.pagination.page);
+  //   }
+  //   if (nextProps.pagination.numPage !== this.state.pagination.numPage) {
+  //     this.setState(curState => curState.pagination.numPage = nextProps.pagination.numPage);
+  //   }
+  //   if (nextProps.pagination.size !== this.state.pagination.size) {
+  //     this.setState(curState => curState.pagination.size = nextProps.pagination.size);
+  //   }
+  // }
 
   componentDidMount() {
     if (this.props.src) {

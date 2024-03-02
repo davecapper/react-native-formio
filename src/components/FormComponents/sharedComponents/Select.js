@@ -1,9 +1,8 @@
 import React from 'react';
-import {View, Text, StyleSheet} from 'react-native';
+import {View, StyleSheet} from 'react-native';
 import Icon from 'react-native-vector-icons/dist/FontAwesome';
 import {Dropdown} from 'react-native-material-dropdown';
 import MultiSelect from 'react-native-multiple-select';
-import {FormLabel} from 'react-native-elements';
 import get from 'lodash/get';
 import isEqual from 'lodash/isEqual';
 import PropTypes from 'prop-types';
@@ -11,6 +10,7 @@ import DeviceInfo from 'react-native-device-info';
 import ValueComponent from './Value';
 import Tooltip from './Tooltip';
 import colors from '../../../defaultTheme/colors';
+import {Text} from '@rneui/themed';
 
 export default class SelectComponent extends ValueComponent {
   constructor(props) {
@@ -40,10 +40,10 @@ export default class SelectComponent extends ValueComponent {
         }
       }
       else {
-        if ((!this.data.hasOwnProperty(refreshOn) && nextProps.hasOwnProperty(refreshOn)) || this.data[refreshOn] !== nextProps.data[refreshOn]) {
+        if ((!Object.prototype.hasOwnProperty.call(this.data, refreshOn) && Object.prototype.hasOwnProperty.call(nextProps, refreshOn)) || this.data[refreshOn] !== nextProps.data[refreshOn]) {
           this.refresh = true;
         }
-        else if (nextProps && nextProps.row && nextProps.row.hasOwnProperty(refreshOn) && this.props.row[refreshOn] !== nextProps.row[refreshOn]) {
+        else if (nextProps && nextProps.row && Object.prototype.hasOwnProperty.call(nextProps.row, refreshOn) && this.props.row[refreshOn] !== nextProps.row[refreshOn]) {
           this.refresh = true;
         }
       }
@@ -135,37 +135,37 @@ export default class SelectComponent extends ValueComponent {
 
   getElements() {
     const selectStyle = StyleSheet.create({
-      wrapper: {
-        flex: 1,
-        marginHorizontal: 20,
-        marginTop: 20
-      },
       container: {
         zIndex: 1000,
       },
       containerSingle: {
         flex: 1,
-        marginTop: 0,
         marginBottom: 15,
-      },
-      label: {
-        maxWidth: DeviceInfo.isTablet() ? 580 : 210,
-        color: this.props.theme.Label.color,
-        fontSize: DeviceInfo.isTablet() ? this.props.theme.Label.fontSize : 12,
-      },
-      mainElement: this.elementLayout(this.props.component.labelPosition),
-      labelWrapper: {
-        flexDirection: 'row',
-        marginTop: this.props.component.labelPosition === 'top' || this.props.component.labelPosition === 'bottom' ? 0 : 40,
-        marginRight: this.props.component.labelPosition === 'left-left' || this.props.component.labelPosition === 'left-right' ? 10 : 0,
-      },
-      list: {
-        backgroundColor: colors.mainBackground,
+        marginTop: 0,
       },
       descriptionText: {
         fontSize: DeviceInfo.isTablet() ? 12 : 10,
         marginLeft: 20,
         marginTop: 10,
+      },
+      label: {
+        color: this.props.theme.Label.color,
+        fontSize: DeviceInfo.isTablet() ? this.props.theme.Label.fontSize : 12,
+        maxWidth: DeviceInfo.isTablet() ? 580 : 210,
+      },
+      labelWrapper: {
+        flexDirection: 'row',
+        marginRight: this.props.component.labelPosition === 'left-left' || this.props.component.labelPosition === 'left-right' ? 10 : 0,
+        marginTop: this.props.component.labelPosition === 'top' || this.props.component.labelPosition === 'bottom' ? 0 : 40,
+      },
+      list: {
+        backgroundColor: colors.mainBackground,
+      },
+      mainElement: this.elementLayout(this.props.component.labelPosition),
+      wrapper: {
+        flex: 1,
+        marginHorizontal: 20,
+        marginTop: 20
       },
     });
 
@@ -177,7 +177,7 @@ export default class SelectComponent extends ValueComponent {
     let Element;
 
     const inputLabel = labelText ?
-      <FormLabel labelStyle={selectStyle.label}>{requiredInline} {component.label}</FormLabel> : null;
+      <Text style={selectStyle.label}>{requiredInline} {component.label}</Text> : null;
 
     if (multiMode) {
       values = this.state.value && this.state.value.item ? this.state.selectItems.filter((i) => this.state.value.item.includes(i.value)) : [];

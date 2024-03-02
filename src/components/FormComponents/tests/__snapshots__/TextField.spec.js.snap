@@ -3,9 +3,27 @@
 exports[`Textfield @textfield Single Textfield renders a basic textfield 1`] = `
 <View
   style={
-    Object {
+    {
       "flex": 1,
     }
   }
-/>
+>
+  <View
+    style={
+      {
+        "flexDirection": "column",
+      }
+    }
+  >
+    <View
+      style={
+        {
+          "flexDirection": "row",
+          "marginRight": 0,
+          "marginTop": 15,
+        }
+      }
+    />
+  </View>
+</View>
 `;

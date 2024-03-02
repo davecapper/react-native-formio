@@ -6,7 +6,6 @@ import BaseComponent from '../sharedComponents/Base';
 import styles from './styles';
 
 export default class Content extends BaseComponent {
-
   constructor(props) {
     super(props);
     this.onLinkPress = this.onLinkPress.bind(this);

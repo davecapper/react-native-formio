@@ -4,7 +4,7 @@ import Fieldset from '../fieldset/Fieldset';
 import colors from '../../../defaultTheme/colors';
 import theme from '../../../defaultTheme';
 
-import components from '../../../../test/forms/componentSpec';
+import * as components from '../../../../test/forms/componentSpec';
 
 describe('Fieldset', () => {
   describe(' Fieldset component', () => {
@@ -13,7 +13,7 @@ describe('Fieldset', () => {
       'tableView': true,
       'legend': '',
       'components': [
-        components.textfeild,
+        components.textfield,
         components.password,
         components.phoneNumber
       ],

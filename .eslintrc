@@ -16,10 +16,7 @@
     "jest": true,
     "node": true
   },
-  "plugins": [
-    "react",
-    "react-native"
-  ],
+  "plugins": ["react", "react-native"],
   "globals": {
     "require": true,
     "module": true,
@@ -30,5 +27,10 @@
     "eslint-config-formio",
     "plugin:react/recommended",
     "plugin:react-native/all"
-  ]
+  ],
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  }
 }

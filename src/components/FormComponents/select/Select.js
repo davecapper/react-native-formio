@@ -1,7 +1,7 @@
 import React from 'react';
 import SelectComponent from '../sharedComponents/Select';
 import formiojs from '../../../formio';
-import {Text} from 'react-native';
+import {Text} from '@rneui/themed';
 import {interpolate, serialize, raw} from '../../../util';
 import get from 'lodash/get';
 
@@ -167,10 +167,10 @@ export default class Select extends SelectComponent {
               this.setResult(get(data, this.props.component.selectValues, []), append);
             }
             // Attempt to default to the formio settings for a resource.
-            else if (data.hasOwnProperty('data')) {
+            else if (Object.prototype.hasOwnProperty.call(data, 'data')) {
               this.setResult(data.data, append);
             }
-            else if (data.hasOwnProperty('items')) {
+            else if (Object.prototype.hasOwnProperty.call(data, 'items')) {
               this.setResult(data.items, append);
             }
             // Use the data itself.

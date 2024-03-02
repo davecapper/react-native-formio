@@ -42,7 +42,7 @@ export default {
         return;
       }
 
-      while (formKeys.hasOwnProperty(component.key)) {
+      while (Object.prototype.hasOwnProperty.call(formKeys, component.key)) {
         component.key = this.iterateKey(component.key);
         changed = true;
       }

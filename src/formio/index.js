@@ -39,7 +39,7 @@ export default class Formio {
     this.vUrl = '';
     this.query = '';
 
-    if (options.hasOwnProperty('base')) {
+    if (Object.prototype.hasOwnProperty.call(options, 'base')) {
       this.base = options.base;
     }
     else {
@@ -56,7 +56,7 @@ export default class Formio {
       return;
     }
 
-    if (options.hasOwnProperty('project')) {
+    if (Object.prototype.hasOwnProperty.call(options, 'project')) {
       this.projectUrl = options.project;
     }
 
@@ -102,7 +102,7 @@ export default class Formio {
     // Register an array of items.
     const registerItems = (items, base, staticBase) => {
       for (const i in items) {
-        if (items.hasOwnProperty(i)) {
+        if (Object.prototype.hasOwnProperty.call(items, i)) {
           const item = items[i];
           if (Array.isArray(item)) {
             registerItems(item, base, true);
@@ -161,7 +161,7 @@ export default class Formio {
       this.formId = path.replace(/^\/+|\/+$/g, '');
       const items = ['submission', 'action', 'v'];
       for (const i in items) {
-        if (items.hasOwnProperty(i)) {
+        if (Object.prototype.hasOwnProperty.call(items, i)) {
           const item = items[i];
           this[`${item}sUrl`] = `${this.projectUrl + path}/${item}`;
           if ((this.pathType === item) && (subs.length > 2) && subs[2]) {
@@ -460,7 +460,7 @@ export default class Formio {
         return Formio.pluginGet('fileRequest', requestArgs)
           .then((result) => {
             if (storage && isNil(result)) {
-              if (Formio.providers.storage.hasOwnProperty(storage)) {
+              if (Object.prototype.hasOwnProperty.call(Formio.providers.storage, storage)) {
                 const provider = new Formio.providers.storage[storage](this);
                 return provider.uploadFile(file, fileName, dir, progressCallback, url);
               }
@@ -486,7 +486,7 @@ export default class Formio {
         return Formio.pluginGet('fileRequest', requestArgs)
           .then((result) => {
             if (file.storage && isNil(result)) {
-              if (Formio.providers.storage.hasOwnProperty(file.storage)) {
+              if (Object.prototype.hasOwnProperty.call(Formio.providers.storage, file.storage)) {
                 const provider = new Formio.providers.storage[file.storage](this);
                 return provider.downloadFile(file);
               }
@@ -517,7 +517,7 @@ export default class Formio {
       let anonRole = {};
       let adminRole = {};
       for (const roleName in access.roles) {
-        if (access.roles.hasOwnProperty(roleName)) {
+        if (Object.prototype.hasOwnProperty.call(access.roles, roleName)) {
           const role = access.roles[roleName];
           if (role.default) {
             anonRole = role;
@@ -537,11 +537,11 @@ export default class Formio {
       }
 
       for (const i in form.submissionAccess) {
-        if (form.submissionAccess.hasOwnProperty(i)) {
+        if (Object.prototype.hasOwnProperty.call(form.submissionAccess, i)) {
           const subRole = form.submissionAccess[i];
           if (subRole.type === 'create_all' || subRole.type === 'create_own') {
             for (const j in subRole.roles) {
-              if (subRole.roles.hasOwnProperty(j)) {
+              if (Object.prototype.hasOwnProperty.call(subRole.roles, j)) {
                 // Check if anonymous is allowed.
                 if (anonRole._id === subRole.roles[j]) {
                   canSubmitAnonymously = true;
@@ -589,7 +589,7 @@ export default class Formio {
   static serialize(obj) {
     const str = [];
     for (const p in obj) {
-      if (obj.hasOwnProperty(p)) {
+      if (Object.prototype.hasOwnProperty.call(obj, p)) {
         str.push(`${encodeURIComponent(p)}=${encodeURIComponent(obj[p])}`);
       }
     }
@@ -672,7 +672,7 @@ export default class Formio {
     const cacheKey = buffer.from(url, 'binary').toString('base64');
 
     // Get the cached promise to save multiple loads.
-    if (!opts.ignoreCache && method === 'GET' && Formio.cache.hasOwnProperty(cacheKey)) {
+    if (!opts.ignoreCache && method === 'GET' && Object.prototype.hasOwnProperty.call(Formio.cache, cacheKey)) {
       return Promise.resolve(Formio.cache[cacheKey]);
     }
 
@@ -843,7 +843,7 @@ export default class Formio {
       Formio.tokens = {};
     }
 
-    return Formio.tokens.formioToken = token || '';
+    Formio.tokens.formioToken = token || '';
   }
 
   static async setToken(token, opts) {

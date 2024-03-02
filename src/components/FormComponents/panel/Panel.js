@@ -1,7 +1,7 @@
 import React from 'react';
-import {FormioComponentsList} from '../../';
+// import {FormioComponentsList} from '../../';
 import {View} from 'react-native';
-import {Card} from 'react-native-elements';
+import {Card} from '@rneui/themed';
 import PropTypes from 'prop-types';
 import {StyleSheet} from 'react-native';
 import styles from './styles';
@@ -11,12 +11,13 @@ const Panel = (props) => {
   const titleStyle = {...StyleSheet.flatten(styles.title), color: props.colors.secondaryTextColor};
 
     return (
-      <Card containerStyle={styles.panel} title={title} titleStyle={titleStyle}>
+      <Card containerStyle={styles.panel}>
+        <Card.Title style={titleStyle}>{title}</Card.Title>
         <View style={styles.componentsWrapper}>
-          <FormioComponentsList
+          {/* <FormioComponentsList
             {...props}
             components={props.component.components}
-          ></FormioComponentsList>
+          ></FormioComponentsList> */}
         </View>
       </Card>
     );

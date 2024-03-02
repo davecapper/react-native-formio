@@ -3,12 +3,12 @@
 exports[`Change Events @change fires change events on a form 1`] = `
 <RCTScrollView
   contentContainerStyle={
-    Object {
+    {
       "paddingBottom": 30,
     }
   }
   style={
-    Object {
+    {
       "backgroundColor": "#ffffff",
       "flex": 1,
     }
@@ -17,167 +17,143 @@ exports[`Change Events @change fires change events on a form 1`] = `
   <View>
     <View
       style={
-        Object {
+        {
           "flex": 1,
         }
       }
     >
       <View
         style={
-          Object {
+          {
             "flex": 1,
           }
         }
       >
         <View
           style={
-            Array [
-              Object {},
-              undefined,
-            ]
+            {
+              "flexDirection": "column",
+            }
           }
         >
-          <Text
+          <View
             style={
-              Array [
-                Object {},
-                undefined,
-                undefined,
-                undefined,
-                undefined,
-                undefined,
-                undefined,
-                undefined,
-                undefined,
-                undefined,
-                Array [
-                  Object {
-                    "color": "#86939e",
-                    "fontSize": 15,
-                    "fontWeight": "bold",
-                    "marginBottom": 1,
-                    "marginLeft": 20,
-                    "marginRight": 20,
-                    "marginTop": 15,
-                  },
-                  undefined,
-                  undefined,
-                ],
-              ]
+              {
+                "flexDirection": "row",
+                "marginRight": 0,
+                "marginTop": 15,
+              }
             }
           >
             <Text
-              style={
-                Array [
-                  Object {},
-                  undefined,
-                  undefined,
-                  undefined,
-                  undefined,
-                  undefined,
-                  undefined,
-                  undefined,
-                  undefined,
-                  undefined,
-                  undefined,
-                ]
-              }
-            >
-              
-            </Text>
-             
-            <Text
-              style={
-                Array [
-                  Object {},
-                  undefined,
-                  undefined,
-                  undefined,
-                  undefined,
-                  undefined,
-                  undefined,
-                  undefined,
-                  undefined,
-                  undefined,
-                  undefined,
-                ]
-              }
-            >
-              
-            </Text>
-             
-            My Textfield
-             
-            <Text
-              style={
-                Array [
-                  Object {},
-                  undefined,
-                  undefined,
-                  undefined,
-                  undefined,
-                  undefined,
-                  undefined,
-                  undefined,
-                  undefined,
-                  undefined,
-                  undefined,
-                ]
-              }
-            >
-              
-            </Text>
-          </Text>
-        </View>
-        <View
-          style={
-            Object {
-              "borderBottomColor": "#bdc6cf",
-              "borderBottomWidth": 1,
-              "borderColor": "#9e9e9e",
-              "marginLeft": 20,
-              "marginRight": 20,
-              "transform": Array [
-                Object {
-                  "translateX": 0,
-                },
-              ],
-            }
-          }
-        >
-          <TextInput
-            allowFontScaling={true}
-            data-index={0}
-            defaultValue=""
-            editable={true}
-            id="myTextfield"
-            name="myTextfield"
-            onBlur={[Function]}
-            onChangeText={[Function]}
-            placeholder=""
-            placeholderTextColor="#bdbdbd"
-            shake={true}
-            style={
-              Array [
-                Object {
-                  "color": "#86939e",
-                  "minHeight": 36,
-                  "width": 750,
-                },
-                Object {
-                  "fontSize": 17.5,
-                },
-                Object {
+              accessibilityRole="text"
+              labelStyle={
+                {
                   "color": "rgba(0, 0, 0, 0.87)",
-                  "fontSize": 14,
-                  "lineHeight": 18,
-                },
-              ]
+                  "flexWrap": "wrap",
+                  "fontSize": 12,
+                  "maxWidth": 580,
+                }
+              }
+              style={
+                {
+                  "color": "#242424",
+                }
+              }
+            >
+              <Text
+                accessibilityRole="text"
+                style={
+                  {
+                    "color": "#242424",
+                  }
+                }
+              />
+               
+              <Text
+                accessibilityRole="text"
+                style={
+                  {
+                    "color": "#242424",
+                  }
+                }
+              />
+               
+              My Textfield
+               
+              <Text
+                accessibilityRole="text"
+                style={
+                  {
+                    "color": "#242424",
+                  }
+                }
+              />
+            </Text>
+          </View>
+          <View
+            style={
+              {
+                "borderColor": "#9e9e9e",
+                "paddingHorizontal": 10,
+                "width": "100%",
+              }
             }
-            type="text"
-            underlineColorAndroid="transparent"
-            value=""
-          />
+            testID="RNE__Input__view-wrapper"
+          >
+            <View
+              collapsable={false}
+              style={
+                {
+                  "alignItems": "center",
+                  "borderBottomWidth": 1,
+                  "borderColor": "#86939e",
+                  "flexDirection": "row",
+                  "transform": [
+                    {
+                      "translateX": 0,
+                    },
+                  ],
+                }
+              }
+            >
+              <TextInput
+                data-index={0}
+                defaultValue=""
+                editable={true}
+                id="myTextfield"
+                name="myTextfield"
+                onBlur={[Function]}
+                onChangeText={[Function]}
+                placeholder=""
+                placeholderTextColor="#bdbdbd"
+                shake={true}
+                style={
+                  {
+                    "color": "rgba(0, 0, 0, 0.87)",
+                    "flex": 1,
+                    "fontSize": 14,
+                    "lineHeight": 18,
+                    "maxWidth": 580,
+                    "minHeight": 40,
+                  }
+                }
+                testID="RNE__Input__text-input"
+                type="text"
+                underlineColorAndroid="transparent"
+                value=""
+              />
+            </View>
+            <Text
+              style={
+                {
+                  "color": "#ff190c",
+                  "fontSize": 12,
+                  "margin": 5,
+                }
+              }
+            />
+          </View>
         </View>
       </View>
     </View>

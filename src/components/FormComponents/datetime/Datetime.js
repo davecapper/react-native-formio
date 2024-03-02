@@ -2,7 +2,7 @@ import React from 'react';
 import DateTimePicker from 'react-native-modal-datetime-picker';
 import MultiComponent from '../sharedComponents/Multi';
 import {View, Text} from 'react-native';
-import {Button} from 'react-native-elements';
+import {Button} from '@rneui/themed';
 import styles from './styles';
 import moment from 'moment';
 

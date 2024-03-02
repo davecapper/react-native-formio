@@ -3,13 +3,30 @@
 exports[`Select Field Select Component Render a basic select component 1`] = `
 <View
   style={
-    Object {
+    {
       "flex": 1,
       "marginHorizontal": 20,
       "marginTop": 20,
     }
   }
 >
-  Dropdown
+  <View
+    style={
+      {
+        "flexDirection": "column",
+      }
+    }
+  >
+    <View
+      style={
+        {
+          "flexDirection": "row",
+          "marginRight": 0,
+          "marginTop": 40,
+        }
+      }
+    />
+    Dropdown
+  </View>
 </View>
 `;

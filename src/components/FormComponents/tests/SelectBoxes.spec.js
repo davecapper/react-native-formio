@@ -1,6 +1,7 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 import colors from '../../../defaultTheme/colors';
+import theme from '../../../defaultTheme';
 import Selectboxes from '../selectboxes/SelectBoxes';
 
 describe('Selectboxes', () => {
@@ -43,6 +44,7 @@ describe('Selectboxes', () => {
       const element = renderer.create(
         <Selectboxes
           colors={colors}
+          theme={theme}
           component={component}
           attachToForm={attachToForm}
         />

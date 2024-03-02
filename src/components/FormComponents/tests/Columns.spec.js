@@ -4,7 +4,7 @@ import Columns from '../columns/Columns';
 import colors from '../../../defaultTheme/colors';
 import theme from '../../../defaultTheme';
 
-import components from '../../../../test/forms/componentSpec';
+import * as components from '../../../../test/forms/componentSpec';
 
 describe('Columns', () => {
   describe.only(' Columns component', () => {
@@ -20,7 +20,7 @@ describe('Columns', () => {
       'columns': [
         {
           'components': [
-            components.textfeild,
+            components.textfield,
             components.password
           ]
         },

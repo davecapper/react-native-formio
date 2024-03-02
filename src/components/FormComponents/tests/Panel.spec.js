@@ -4,7 +4,7 @@ import Panel from '../panel/Panel';
 import colors from '../../../defaultTheme/colors';
 import theme from '../../../defaultTheme';
 
-import components from '../../../../test/forms/componentSpec';
+import * as components from '../../../../test/forms/componentSpec';
 
 describe('Panel', () => {
   describe(' Panel component', () => {
@@ -13,7 +13,7 @@ describe('Panel', () => {
       'title': 'testpanel',
       'theme': 'warning',
       'components': [
-        components.textfeild,
+        components.textfield,
         components.password,
         components.phoneNumber
       ],

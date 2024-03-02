@@ -3,28 +3,372 @@
 exports[`Selectboxes Selectboxes field Renders a selectboxes field 1`] = `
 <View
   style={
-    Object {
-      "marginLeft": 20,
+    {
+      "flex": 1,
+      "marginHorizontal": 20,
       "marginTop": 20,
     }
   }
 >
-  <Text
+  <View
     style={
-      Object {
-        "fontSize": 16,
-        "fontWeight": "bold",
+      {
+        "flexDirection": "column",
       }
     }
   >
-    selectBox
-  </Text>
-   
-  <Text>
-    
-  </Text>
-  <View>
-    SelectBoxes
+    <View
+      style={
+        {
+          "flexDirection": "row",
+          "marginBottom": 0,
+          "marginLeft": 0,
+          "marginRight": 0,
+          "marginTop": 0,
+        }
+      }
+    >
+      <Text
+        accessibilityRole="text"
+        style={
+          {
+            "color": "#242424",
+          }
+        }
+      >
+        <Text
+          accessibilityRole="text"
+          style={
+            {
+              "color": "rgba(0, 0, 0, 0.87)",
+              "flexWrap": "wrap",
+              "fontSize": 12,
+            }
+          }
+        >
+          selectBox
+        </Text>
+         
+        <Text
+          accessibilityRole="text"
+          style={
+            {
+              "color": "#242424",
+            }
+          }
+        />
+      </Text>
+    </View>
+    <View
+      style={
+        {
+          "borderBottomWidth": 0.5,
+          "borderColor": "#9e9e9e",
+          "borderTopWidth": 0.5,
+          "flex": 1,
+          "flexDirection": "column",
+          "marginHorizontal": 0,
+        }
+      }
+    >
+      <View
+        accessibilityRole="checkbox"
+        accessibilityState={
+          {
+            "busy": undefined,
+            "checked": false,
+            "disabled": false,
+            "expanded": undefined,
+            "selected": undefined,
+          }
+        }
+        accessibilityValue={
+          {
+            "max": undefined,
+            "min": undefined,
+            "now": undefined,
+            "text": undefined,
+          }
+        }
+        accessible={true}
+        checkedIcon="check-square"
+        collapsable={false}
+        focusable={true}
+        onBlur={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onIconPress={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        size={26}
+        style={
+          {
+            "backgroundColor": "transparent",
+            "borderColor": "#ffffff",
+            "borderWidth": 0,
+            "margin": 0,
+            "marginLeft": 10,
+            "marginRight": 10,
+            "padding": 10,
+            "zIndex": 0,
+          }
+        }
+        testID="RNE__CheckBox__Wrapper"
+        uncheckedColor="#03a9f4"
+        uncheckedIcon="square-o"
+      >
+        <View
+          style={
+            {
+              "alignItems": "center",
+              "flexDirection": "row",
+            }
+          }
+        >
+          <Text
+            allowFontScaling={false}
+            onPress={[Function]}
+            selectable={false}
+            style={
+              [
+                {
+                  "color": "#03a9f4",
+                  "fontSize": 26,
+                },
+                {
+                  "minWidth": 26,
+                },
+                {
+                  "fontFamily": "FontAwesome",
+                  "fontStyle": "normal",
+                  "fontWeight": "normal",
+                },
+                {},
+              ]
+            }
+            testID="RNE__Checkbox__Icon"
+          >
+            
+          </Text>
+          <Text
+            accessibilityRole="text"
+            style={
+              {
+                "color": "#43484d",
+                "fontWeight": "bold",
+                "marginLeft": 10,
+                "marginRight": 10,
+              }
+            }
+            testID="RNE__CheckBox__Title"
+          >
+            firstSelectbox
+          </Text>
+        </View>
+      </View>
+      <View
+        accessibilityRole="checkbox"
+        accessibilityState={
+          {
+            "busy": undefined,
+            "checked": false,
+            "disabled": false,
+            "expanded": undefined,
+            "selected": undefined,
+          }
+        }
+        accessibilityValue={
+          {
+            "max": undefined,
+            "min": undefined,
+            "now": undefined,
+            "text": undefined,
+          }
+        }
+        accessible={true}
+        checkedIcon="check-square"
+        collapsable={false}
+        focusable={true}
+        onBlur={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onIconPress={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        size={26}
+        style={
+          {
+            "backgroundColor": "transparent",
+            "borderColor": "#ffffff",
+            "borderWidth": 0,
+            "margin": 0,
+            "marginLeft": 10,
+            "marginRight": 10,
+            "padding": 10,
+            "zIndex": 0,
+          }
+        }
+        testID="RNE__CheckBox__Wrapper"
+        uncheckedColor="#03a9f4"
+        uncheckedIcon="square-o"
+      >
+        <View
+          style={
+            {
+              "alignItems": "center",
+              "flexDirection": "row",
+            }
+          }
+        >
+          <Text
+            allowFontScaling={false}
+            onPress={[Function]}
+            selectable={false}
+            style={
+              [
+                {
+                  "color": "#03a9f4",
+                  "fontSize": 26,
+                },
+                {
+                  "minWidth": 26,
+                },
+                {
+                  "fontFamily": "FontAwesome",
+                  "fontStyle": "normal",
+                  "fontWeight": "normal",
+                },
+                {},
+              ]
+            }
+            testID="RNE__Checkbox__Icon"
+          >
+            
+          </Text>
+          <Text
+            accessibilityRole="text"
+            style={
+              {
+                "color": "#43484d",
+                "fontWeight": "bold",
+                "marginLeft": 10,
+                "marginRight": 10,
+              }
+            }
+            testID="RNE__CheckBox__Title"
+          >
+            secondSelectbox
+          </Text>
+        </View>
+      </View>
+      <View
+        accessibilityRole="checkbox"
+        accessibilityState={
+          {
+            "busy": undefined,
+            "checked": false,
+            "disabled": false,
+            "expanded": undefined,
+            "selected": undefined,
+          }
+        }
+        accessibilityValue={
+          {
+            "max": undefined,
+            "min": undefined,
+            "now": undefined,
+            "text": undefined,
+          }
+        }
+        accessible={true}
+        checkedIcon="check-square"
+        collapsable={false}
+        focusable={true}
+        onBlur={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onIconPress={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        size={26}
+        style={
+          {
+            "backgroundColor": "transparent",
+            "borderColor": "#ffffff",
+            "borderWidth": 0,
+            "margin": 0,
+            "marginLeft": 10,
+            "marginRight": 10,
+            "padding": 10,
+            "zIndex": 0,
+          }
+        }
+        testID="RNE__CheckBox__Wrapper"
+        uncheckedColor="#03a9f4"
+        uncheckedIcon="square-o"
+      >
+        <View
+          style={
+            {
+              "alignItems": "center",
+              "flexDirection": "row",
+            }
+          }
+        >
+          <Text
+            allowFontScaling={false}
+            onPress={[Function]}
+            selectable={false}
+            style={
+              [
+                {
+                  "color": "#03a9f4",
+                  "fontSize": 26,
+                },
+                {
+                  "minWidth": 26,
+                },
+                {
+                  "fontFamily": "FontAwesome",
+                  "fontStyle": "normal",
+                  "fontWeight": "normal",
+                },
+                {},
+              ]
+            }
+            testID="RNE__Checkbox__Icon"
+          >
+            
+          </Text>
+          <Text
+            accessibilityRole="text"
+            style={
+              {
+                "color": "#43484d",
+                "fontWeight": "bold",
+                "marginLeft": 10,
+                "marginRight": 10,
+              }
+            }
+            testID="RNE__CheckBox__Title"
+          >
+            thirdSelectbox
+          </Text>
+        </View>
+      </View>
+    </View>
   </View>
 </View>
 `;

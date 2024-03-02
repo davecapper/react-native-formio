@@ -8,7 +8,7 @@ const getCustomDefault = (component) => {
 export const getDefaultValue = (value, component, getInitialValue, onChangeCustom) => {
   // Allow components to set different default values.
   if (value == null) {
-    if (component.hasOwnProperty('customDefaultValue')) {
+    if (Object.prototype.hasOwnProperty.call(component, 'customDefaultValue')) {
       try {
         value = getCustomDefault(component);
       }
@@ -19,7 +19,7 @@ export const getDefaultValue = (value, component, getInitialValue, onChangeCusto
         value = '';
       }
     }
-    else if (component.hasOwnProperty('defaultValue')) {
+    else if (Object.prototype.hasOwnProperty.call(component, 'defaultValue')) {
       value = component.defaultValue;
       if (typeof onChangeCustom === 'function') {
         value = onChangeCustom(value);

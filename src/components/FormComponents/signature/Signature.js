@@ -1,6 +1,6 @@
 import React from 'react';
 import {View, Image, Text, Modal} from 'react-native';
-import {Button} from 'react-native-elements';
+import {Button} from '@rneui/themed';
 import ValueComponent from '../sharedComponents/Value';
 import SignatureCapture from 'react-native-signature-capture';
 import DeviceInfo from 'react-native-device-info';

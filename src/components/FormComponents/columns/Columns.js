@@ -1,5 +1,5 @@
 import React from 'react';
-import {FormioComponentsList} from '../../../components';
+// TODO: DC - FIX THIS CIRCULAR REFERENCE import {FormioComponentsList} from '../../../components';
 import PropTypes from 'prop-types';
 import {View} from 'react-native';
 import styles from './styles';
@@ -7,11 +7,12 @@ import styles from './styles';
 const Columns = (props) => (
   <View style={{...styles.columns, borderBottomColor: props.colors.borderColor}}>
     {props.component.columns.map((column, index) => (
-      <FormioComponentsList
-        key={index}
-        {...props}
-        components={column.components}
-      />
+      // <FormioComponentsList
+      //   key={index}
+      //   {...props}
+      //   components={column.components}
+      // />
+      <View key={index}>{column.components}</View>
     ))}
   </View>
 );

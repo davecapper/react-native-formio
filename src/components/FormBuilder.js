@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, StyleSheet} from 'react-native';
+import {View, StyleSheet, Text} from 'react-native';
 
 const formBuilderStyles = StyleSheet.create({
   wrapper: {
@@ -9,7 +9,7 @@ const formBuilderStyles = StyleSheet.create({
 
 export default class FormBuilder extends React.Component {
   render() {
-    return <View style={formBuilderStyles.wrapper}>Form Builder</View>;
+    return <View style={formBuilderStyles.wrapper}><Text>Form Builder</Text></View>;
   }
 }
 

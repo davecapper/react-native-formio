@@ -29,7 +29,7 @@ export const FormioComponents = {
     }
   },
   getComponent: (type) => {
-    return components.hasOwnProperty(type) ? components[type] : components['custom'];
+    return Object.prototype.hasOwnProperty.call(components, type) ? components[type] : components['custom'];
   },
   components,
   groups

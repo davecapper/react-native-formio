@@ -1,7 +1,7 @@
 import React from 'react';
 import {View} from 'react-native';
 import PropTypes from 'prop-types';
-import {FormioComponentsList} from '../../';
+// TODO: DC - NEED TO FIX CIRCULAR REF import {FormioComponentsList} from '../../';
 import H3 from '../h3/H3';
 import styles from './styles';
 
@@ -10,10 +10,10 @@ const Fieldset = (props) => {
   return (
     <View style={styles.fieldset}>
       {legend}
-      <FormioComponentsList
+      {/* <FormioComponentsList
         {...props}
         components={props.component.components}
-      ></FormioComponentsList>
+      ></FormioComponentsList> */}
     </View>
   );
 };

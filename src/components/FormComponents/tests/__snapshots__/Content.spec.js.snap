@@ -3,7 +3,7 @@
 exports[`Content Content field Renders a content component 1`] = `
 <View
   style={
-    Object {
+    {
       "flex": 1,
       "marginBottom": 0,
       "marginHorizontal": 20,

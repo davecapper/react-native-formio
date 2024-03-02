@@ -1,5 +1,5 @@
 import React from 'react';
-import {Text} from 'react-native-elements';
+import {Text} from '@rneui/themed';
 import PropTypes from 'prop-types';
 import styles from './styles';
 
